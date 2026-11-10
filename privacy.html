@@ -7,41 +7,128 @@
 <style>
   :root { color-scheme: light dark; }
   body { margin: 0; background: #0f1322; color: #e8e8ee; font: 16px/1.6 -apple-system, system-ui, Segoe UI, Roboto, sans-serif; }
-  .wrap { max-width: 680px; margin: 0 auto; padding: 40px 22px 80px; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 40px 16px 80px; }
   h1 { font-size: 28px; margin: 0 0 6px; }
   h2 { font-size: 19px; margin: 32px 0 8px; color: #5cc8ff; }
   .date { color: #8a90a2; font-size: 14px; margin-bottom: 24px; }
   a { color: #5cc8ff; }
-  code { background: rgba(255,255,255,.08); padding: 1px 6px; border-radius: 5px; }
+  .tbl { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid rgba(255,255,255,.12); }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  .muted { color: #8a90a2; font-size: 14px; }
+  nav { font-size: 14px; color: #8a90a2; margin-bottom: 18px; }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="odds.html">Chest odds</a> · <a href="support.html">Support</a></nav>
   <h1>Privacy Policy — Dice Defense</h1>
-  <div class="date">Last updated: 14 August 2026</div>
+  <div class="date">Effective date: 10 November 2026 · Last updated: 10 November 2026</div>
 
-  <p>Dice Defense (“the app”, “we”) is a single-player mobile game. We respect your privacy. This policy explains, in plain language, what data the app does and does not handle.</p>
+  <p>Dice Defense (published on the app stores as “Dice Defense TD”; “the app”, “the game”, “we”, “us”) is a mobile tower-defense game for iOS and Android made by an individual developer, Araz Qasimov, Baku, Azerbaijan. We are responsible (the “controller”) for the personal data described here. This policy explains, in plain language, what data the game handles, why, and the choices you have. Please also read our <a href="terms.html">Terms of Service</a>.</p>
 
-  <h2>Data we collect</h2>
-  <p><strong>None.</strong> The app does not collect, transmit, sell, or share any personal data. There are no user accounts, no login, no analytics, no advertising, and no third-party tracking SDKs.</p>
+  <h2>Summary</h2>
+  <ul>
+    <li><strong>No ads, no tracking.</strong> No advertising IDs, no analytics or advertising SDKs, no tracking across other apps or websites.</li>
+    <li><strong>No sign-up.</strong> Your online account is anonymous: there is no username, password, e-mail or phone number.</li>
+    <li>The game can be played offline. <strong>Online features</strong> (leaderboard, saving your finished games online, Ranked opponents, purchases) are <strong>on by default</strong>. The app tells you about them the first time you open it, and you can turn them off at any time in <em>Settings → Online &amp; leaderboard</em>.</li>
+    <li><strong>Optional in-app purchases</strong>, including chests with random items (the odds are shown in the game before you open one, and on our <a href="odds.html">odds page</a>). Payments are handled by Apple (App Store) or Google (Google Play). <strong>We never receive your card or bank details.</strong></li>
+    <li>Our server is in the <strong>European Union</strong> (Supabase, Frankfurt, Germany).</li>
+    <li>You can delete your online data and your anonymous account at any time in the app: <em>Settings → Delete my online data</em>. Please read <a href="#delete">what happens to purchases</a> first.</li>
+  </ul>
+
+  <h2>Data we collect when online features are on</h2>
+  <div class="tbl"><table>
+    <tr><th>Data</th><th>What it is</th><th>Why</th></tr>
+    <tr><td>Anonymous player ID</td><td>A random identifier created by the app, plus a public “Player code”. It is not linked to your name, e-mail, phone number or advertising ID.</td><td>To keep your scores, nickname, purchases and items together.</td></tr>
+    <tr><td>Nickname (optional)</td><td>The name you choose. Please do not use your real name.</td><td>Shown to other players on leaderboards and, when player recordings are used in Ranked, to your Ranked opponents.</td></tr>
+    <tr><td>Game records</td><td>For each finished game: mode, level or map, your dice deck and their Power levels, your in-game actions (which die was placed, upgraded or sold, enemies sent, and when), score, wave reached, lives, game settings, start time (rounded to the minute), app version and platform (iOS or Android).</td><td>Leaderboards; Ranked opponents (see below); checking scores for cheating; improving game balance.</td></tr>
+    <tr><td>Purchase records</td><td>For each purchase: store (Apple or Google), transaction ID and original transaction ID, product ID, purchase date, price and currency as reported by the store, test or real environment, and refund or revocation status and date. Also a random “purchase token” the app gives the store so that a purchase can be matched to your player ID.</td><td>To deliver what you bought, avoid crediting the same purchase twice, restore purchases, handle refunds, prevent fraud, and keep accounting records.</td></tr>
+    <tr><td>Wallet and items</td><td>Your gem balance and a history of gem changes (bought, received for free, spent, converted to gold, removed after a refund, moved by Restore purchases), with gems marked as <em>paid</em> or <em>free</em>; any negative balance after a refund; your Dice Pass seasons; and which one-time or monthly offers you have already bought.</td><td>To keep purchased content safe, apply offer limits, and handle refunds correctly.</td></tr>
+    <tr><td>Store notifications</td><td>Messages Apple or Google send us about your purchases (for example: refunded, revoked, refund reversed).</td><td>To remove refunded content and keep balances correct.</td></tr>
+    <tr><td>Bug reports (optional)</td><td>The text you write in “Report a bug” plus basic technical details (screen, wave, score, deck, language, app version, platform).</td><td>To fix problems.</td></tr>
+    <tr><td>Reports about names</td><td>If you report a player’s nickname: who reported whom, and when.</td><td>Moderation.</td></tr>
+    <tr><td>Technical data</td><td>Your IP address and request times are processed by our hosting provider when the app connects to the server (standard server logs).</td><td>To deliver the service and protect it from abuse.</td></tr>
+  </table></div>
+  <p>We do <strong>not</strong> collect your name, e-mail address (unless you e-mail us), postal address, phone number, contacts, location, photos, microphone or camera data. We do <strong>not</strong> receive your payment card, bank details or Apple ID / Google account e-mail. We do not use advertising identifiers and do not track you across other apps or websites. We do not sell or rent personal data, and we do not use purchase data for advertising or for personalised prices or offers.</p>
+
+  <h2>Purchases</h2>
+  <ul>
+    <li><strong>Who processes your payment:</strong> Apple (App Store) or Google (Google Play) sells the item to you and processes your payment under their own terms and privacy policies (<a href="https://www.apple.com/legal/privacy/">Apple</a>, <a href="https://policies.google.com/privacy">Google</a>). They send us only the purchase record described above.</li>
+    <li><strong>How we check purchases:</strong> our server asks Apple or Google to confirm each purchase before your items are added. This prevents fraud and double crediting.</li>
+    <li><strong>Restore purchases:</strong> when you tap <em>Restore purchases</em> (in the Shop), the app sends us the list of your past purchases in this game that the store provides. We confirm them with the store and may move purchased gems, items and Dice Pass seasons from an earlier player ID that made those purchases to your current one. The earlier player ID is then emptied. This can be done a limited number of times (currently up to 3 transfers into one account in 30 days).</li>
+    <li><strong>Refunds:</strong> refunds are decided by Apple or Google. When they tell us a purchase was refunded or revoked, we remove the related content as described in our <a href="terms.html#refunds">Terms</a>. Apple may ask developers for information about how a refunded item was used; <strong>we do not answer these requests</strong> and do not send Apple any information about your gameplay. If this changes, we will update this policy first and ask for your agreement in the game.</li>
+    <li><strong>Spending controls:</strong> you can limit or block purchases with your device’s parental controls (Apple Screen Time / Ask to Buy; Google Play purchase authentication).</li>
+  </ul>
+
+  <h2 id="ghosts">Ranked opponents (“ghosts”)</h2>
+  <ul>
+    <li>A Ranked opponent is always a <strong>recording</strong> of an earlier game, replayed at the same time as your game. It is <strong>not a live player</strong>.</li>
+    <li>Recordings made by the game itself (computer-controlled) are labelled <strong>“AI”</strong> next to their name. At launch, all Ranked opponents are these AI recordings, supplied with the app.</li>
+    <li>We plan to add recordings of real players’ games. We will announce this in the game before it starts. From then on, when online features are on, your finished games may be selected as opponents for other players. They will see your <strong>nickname</strong> (or a generic “Player-xxxx” label if your name is hidden), your <strong>Ranked rating/league</strong>, your <strong>dice deck and skins</strong>, and a <strong>replay of your moves</strong>. They will not see your Player code, purchases or any other data.</li>
+    <li>To stop new games being used, turn online features off. To remove your games, delete your online data. A recording already downloaded to another player’s device for a match may stay there until their app refreshes its list of opponents.</li>
+  </ul>
+
+  <h2>Who can see or process your data</h2>
+  <ul>
+    <li><strong>Other players</strong> see your nickname, best scores and waves on leaderboards, and (once introduced) your Ranked recording data as described above.</li>
+    <li><strong>Supabase</strong> (database, server functions and hosting) stores and processes the data on our behalf as our processor, under its data processing agreement. Our project is hosted in the Central EU (Frankfurt, Germany) region.</li>
+    <li><strong>Apple and Google</strong> process your payments under their own terms and send us purchase records and notifications. They receive the random purchase token with each purchase.</li>
+    <li><strong>GitHub</strong> hosts these web pages (see “Links to web pages”).</li>
+    <li>We may disclose data if required by law, or to protect our rights, players or the service from fraud or abuse. We do not share data with anyone else.</li>
+  </ul>
+
+  <h2>Legal basis</h2>
+  <ul>
+    <li><strong>Performance of our contract with you</strong> (the Terms of Service): online features you use, delivering and restoring purchases, your wallet and items, offer limits, refunds, Ranked opponents, bug reports you send.</li>
+    <li><strong>Legal obligations:</strong> keeping purchase and accounting records for the periods required by tax and accounting law.</li>
+    <li><strong>Legitimate interests</strong> (fair play, preventing fraud and cheating, security, game balance, moderating names): checking game records and purchases, server logs, name reports. You can object (see “Your choices and rights”).</li>
+    <li>We do not rely on consent for advertising or tracking because we do neither.</li>
+  </ul>
+
+  <h2>How long we keep it</h2>
+  <ul>
+    <li><strong>Game records and bug reports:</strong> up to 12 months, then deleted automatically — except your single best game per leaderboard, which is kept so the all-time leaderboard stays correct. Resolved name reports: up to 12 months.</li>
+    <li><strong>Player ID, nickname, best scores:</strong> until you delete them. Accounts not used for <strong>13 months</strong> are deleted automatically with all their data — <strong>except accounts that have made a purchase or hold gems, a Dice Pass season or a negative balance after a refund</strong>. These are not deleted for inactivity, so purchased content does not expire.</li>
+    <li><strong>Purchase records:</strong> while your account exists. When you delete your account, each purchase record is kept <strong>without your player ID</strong> (transaction ID, product, date, price, refund status) for <strong>7 years</strong>, for accounting obligations, late refunds and to prevent the same purchase being credited again. It is then deleted.</li>
+    <li><strong>Store notifications:</strong> up to 24 months after we process them.</li>
+    <li><strong>Server logs:</strong> according to our hosting provider’s retention schedule.</li>
+  </ul>
+
+  <h2>Your choices and rights</h2>
+  <ul>
+    <li><strong>Turn online features off:</strong> Settings → Online &amp; leaderboard. The app then sends nothing, games you play while it is off are never uploaded later, and the game stays playable offline. Purchases, Restore purchases and gem spending are not available while online features are off; items you already own stay on our server.</li>
+    <li id="delete"><strong>Delete your online data and account (in the app):</strong> Settings → <em>Delete my online data</em>. This immediately deletes your player ID, nickname, game records, bug reports, reports you made or received, wallet, items and your anonymous account from our database. <strong>Before you confirm, please note:</strong> purchased gems and other purchased content on that account are lost and cannot be refunded by us or moved later. A Dice Pass season (a one-time permanent unlock) can be restored to a new account with <em>Restore purchases</em> using the same Apple ID / Google account. Purchase records are kept without your player ID as described above. Copies in our hosting provider’s technical logs and backups expire on the provider’s schedule.</li>
+    <li><strong>No longer have the app?</strong> E-mail us your <em>Player code</em> (shown on the leaderboard screen) and we will delete the data.</li>
+    <li><strong>Report a nickname:</strong> tap a player on the leaderboard → Report name. A name reported by several players is replaced by a generic “Player-xxxx” label until we review it. You can also hide a player for yourself.</li>
+    <li><strong>Other requests:</strong> you can ask us to access, correct, delete or receive a copy of your data, or object to or restrict its use, by e-mail (below). Please include your Player code. We reply within one month. Depending on where you live, you may also complain to your data-protection authority.</li>
+    <li><strong>US residents (including California):</strong> we do not sell or share personal information for cross-context behavioural advertising, and we do not use sensitive personal information.</li>
+  </ul>
+
+  <h2>Where your data is stored and international transfers</h2>
+  <p>Data from the online features is stored in the European Union (Supabase, Central EU region, Frankfurt, Germany). If you live outside the EU, your data is transferred there. We, the developer, are based in the Republic of Azerbaijan and access the data remotely to run and support the service; we do not copy the database to other locations. Apple and Google process payment data under their own terms and may process it in other countries.</p>
 
   <h2>Data stored on your device</h2>
-  <p>All game data — your progress, best score, collection, decks, currencies, and settings — is stored <strong>only on your device</strong> using local storage. It never leaves your device and we cannot access it. Deleting the app removes this data.</p>
+  <p>Your progress, collection, decks, gold and other in-game resources, settings, your recent game records and a copy of your gem balance (for display) are stored on your device. Like other app data, they may be included in your device’s own system backup (iCloud / Google backup) depending on your settings. Uninstalling the app removes this local data but does <strong>not</strong> delete your online data — use “Delete my online data” for that.</p>
 
-  <h2>Bug reports</h2>
-  <p>If you tap “Report a bug”, the app opens <strong>your own email application</strong> with a pre-filled message that includes basic technical details (the current screen, wave, score, your device/browser identifier). Nothing is sent automatically — you choose whether to send the email, and it is sent from your email account directly to our support address. The app itself does not collect or store this information. Please do not include personal information in the free-text part of the report.</p>
+  <h2>Children and age</h2>
+  <p>Dice Defense is intended for players aged <strong>16 and older</strong>, because it contains in-app purchases with random items. It is not directed at children under 13 and is not in any “Kids” category. The online features do not ask for any real-world personal information. If you are under 18, you need a parent or guardian’s permission to make purchases. We do not knowingly collect personal data from children under 13 (or the higher age set by the law of your country). If you believe a child has used the online features or put personal information in a nickname, contact us and we will delete it.</p>
 
-  <h2>Permissions</h2>
-  <p>The app uses device vibration (haptics) for gameplay feedback. It does not access your contacts, location, camera, microphone, photos, or files.</p>
+  <h2>Security</h2>
+  <p>Data is sent over encrypted connections (HTTPS). Access to the database is restricted: players can only use the game’s own functions and only see the information described above. Purchase checks run on our server using credentials that are never included in the app. No method of storage or transfer is completely secure, but we work to protect your data and will notify you and the authorities of a data breach where the law requires it.</p>
 
-  <h2>Children</h2>
-  <p>The app is suitable for a general audience and does not knowingly collect any information from anyone, including children.</p>
+  <h2>Links to web pages</h2>
+  <p>The Privacy, Terms and Support links open this website in your device’s browser. These pages are hosted on GitHub Pages; GitHub may process technical data such as your IP address under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>.</p>
 
   <h2>Changes</h2>
-  <p>If this policy changes, the “Last updated” date above will be revised.</p>
+  <p>If this policy changes, we will update this page and the dates above, and tell you in the app before a significant change takes effect.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy: <a href="mailto:cs.araz.gasimov@gmail.com">cs.araz.gasimov@gmail.com</a></p>
+  <p>Araz Qasimov (individual developer), Baku, Azerbaijan<br>
+  E-mail: <a href="mailto:cs.araz.gasimov@gmail.com">cs.araz.gasimov@gmail.com</a></p>
+  <p class="muted">Never send us your card number, bank details or passwords. For a purchase problem, the Order ID from Apple’s or Google’s receipt e-mail is enough.</p>
 </div>
 </body>
 </html>

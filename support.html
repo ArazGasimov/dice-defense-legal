@@ -7,35 +7,93 @@
 <style>
   :root { color-scheme: light dark; }
   body { margin: 0; background: #0f1322; color: #e8e8ee; font: 16px/1.6 -apple-system, system-ui, Segoe UI, Roboto, sans-serif; }
-  .wrap { max-width: 680px; margin: 0 auto; padding: 40px 22px 80px; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 40px 16px 80px; }
   h1 { font-size: 28px; margin: 0 0 6px; }
   h2 { font-size: 18px; margin: 28px 0 6px; color: #5cc8ff; }
   p, li { color: #d7dae5; }
   a { color: #5cc8ff; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
   .card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 16px 18px; margin-top: 18px; }
+  .muted { color: #8a90a2; font-size: 14px; }
+  nav { font-size: 14px; color: #8a90a2; margin-bottom: 18px; }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="odds.html">Chest odds</a> · <a href="support.html">Support</a></nav>
   <h1>Dice Defense — Support</h1>
-  <p>Need help or found a bug? We’d love to hear from you.</p>
+  <p>Need help or found a bug? We’d love to hear from you. Dice Defense (“Dice Defense TD” on the app stores) is available for iOS and Android. It is made by Araz Qasimov, an individual developer in Baku, Azerbaijan.</p>
 
   <div class="card">
     <strong>Contact:</strong> <a href="mailto:cs.araz.gasimov@gmail.com">cs.araz.gasimov@gmail.com</a><br>
-    We usually reply within a few days.
+    We usually reply within a few days. Please mention your device model, whether you play on iOS or Android, and your <em>Player code</em> (bottom of the leaderboard screen).<br>
+    <span class="muted">Never send us card numbers, bank details or passwords. For purchase questions, the Order ID from the store’s receipt e-mail is enough.</span>
   </div>
 
   <h2>How to play</h2>
-  <p>Pick an element to summon a tower onto the board, tap a tower to upgrade it, and defend against waves of enemies. If an enemy reaches the end, it damages your castle. Survive as long as you can and beat your best score.</p>
+  <ul>
+    <li><strong>Place dice:</strong> a path winds around a 3×3 board. Pick a die at the bottom of the screen, then tap any free slot to place it.</li>
+    <li><strong>Range matters:</strong> each die only hits enemies inside its range.</li>
+    <li><strong>Upgrade or sell:</strong> tap a die on the board, then tap the green button to upgrade it (each level adds a pip and makes it shoot faster), or sell it to free the slot and get half of its energy back.</li>
+    <li><strong>Energy:</strong> summoning and upgrading cost energy. Energy refills over time and when you defeat enemies. Costs rise as your defense grows.</li>
+    <li><strong>Protect your castle:</strong> every enemy that reaches the castle costs lives. Bosses cost more lives if they get through.</li>
+  </ul>
+  <p class="muted">Tip: tap the “?” button in the game for the in-game How to Play page.</p>
 
   <h2>Frequently asked</h2>
-  <p><strong>How do I unlock new dice?</strong> Open chests to collect shards. Once you have enough shards for a die, it unlocks. You can also craft a die instantly using dust.</p>
-  <p><strong>Is it pay-to-win?</strong> No. Rarer dice are more situational, not stronger. Every unlocked die is balanced to the same power.</p>
-  <p><strong>I lost my progress.</strong> Progress is saved on your device. Reinstalling or clearing app data will reset it.</p>
-  <p><strong>Report a bug from inside the app:</strong> Settings → “Report a bug”. It opens your email app with the details filled in.</p>
+  <p><strong>How do I unlock new dice?</strong> Open Drops and chests to collect shards. Each day, your first 5 wins give a Drop (in Arcade, reaching wave 8 counts as a win). Campaign stars, play-day milestones and the Dice Pass also give Drops, and you can open Gold Chests with gold (up to 4 per day). Choose your <em>Next die</em> in the Collection: part of each roll goes to it until it unlocks. See the <a href="odds.html">odds page</a> for the details.</p>
+  <p><strong>Do I have to pay?</strong> No. The game is free to play and has no ads. Optional purchases (gems, packs, the Dice Pass premium track) speed up progress or give cosmetic items. Dice, Power levels, gold and Spark can all be earned by playing; some cosmetic items (skins, emotions) are easier to get through purchases or the Dice Pass.</p>
+  <p><strong>Do I need an internet connection?</strong> No. The game works offline. The leaderboard, saving your games online and purchases need a connection and online features turned on.</p>
+  <p><strong>What are Campaign, Arcade and Ranked?</strong> Campaign has handcrafted levels with 1–3 stars each. Arcade is endless: survive as many waves as you can and climb the leaderboard. Ranked (opens after Campaign level 5) matches you against a <strong>recording</strong> of an earlier game on the same map and waves — it is <strong>not a live player</strong>. Recordings made by the game itself are marked <strong>“AI”</strong>.</p>
+  <p><strong>How do I change decks?</strong> Open the Dice tab. You can keep up to 5 decks of 5 dice; tap the deck number to switch and the deck name to rename it.</p>
+  <p><strong>I lost my progress.</strong> Progress is saved on your device. Uninstalling the app or clearing its data resets it. Depending on your device settings, it may be restored from your own iCloud or Google device backup. Purchases can be recovered with <em>Restore purchases</em> (see below).</p>
+  <p><strong>Settings:</strong> tap the gear icon on the main screen to switch sound, vibration and reduce motion, manage online features, delete your online data, or report a bug.</p>
+  <p><strong>Report a bug from inside the app:</strong> Settings → “Report a bug”. With online features on, you type your message in the app and it is sent to us together with basic technical details (screen, wave, score, deck, language). With online features off, it opens your e-mail app instead.</p>
+
+  <h2 id="purchases">Purchases</h2>
+  <p><strong>Currencies.</strong> <em>Gems</em> are bought with real money (some are free, for example from the Dice Pass). Gems can be converted to <em>gold</em> (1 gem = 50 gold, up to 3,000 gems in any 30 days) or spent in the Shop. When you spend gems, free gems are used first. Gold and <em>Spark</em> are mostly earned by playing and are used for chests and Power upgrades. In-game currencies have no cash value and cannot be traded or exchanged back for money. The game shows the approximate real-money value next to gem and gold prices.</p>
+  <p><strong>Monthly packs are one-time purchases, not subscriptions.</strong> Each can be bought once per calendar month (UTC), and everything is delivered immediately. Nothing renews automatically, nothing is charged again, and there is nothing to cancel. One-time packs can be bought once per account.</p>
+
+  <p><strong>I paid but didn’t get my items.</strong></p>
+  <ol>
+    <li>Make sure online features are on (Settings → Online &amp; leaderboard) and you have a connection.</li>
+    <li>Close the game completely and open it again.</li>
+    <li>Open the Shop, scroll to the bottom and tap <strong>Restore purchases</strong>.</li>
+    <li>Still missing? E-mail us your Player code and the <strong>Order ID</strong> from the Apple (or Google) receipt e-mail. On iPhone you can also find it in <em>Settings → [your name] → Media &amp; Purchases → View Account → Purchase History</em>.</li>
+  </ol>
+  <p class="muted">If a purchase shows as “pending” (for example waiting for a parent’s Ask to Buy approval), your items arrive after it is approved.</p>
+
+  <p id="restore"><strong>Restore purchases on a new device or after reinstalling</strong></p>
+  <ol>
+    <li>Sign in to the App Store (or Google Play) with the <strong>same Apple ID / Google account</strong> you used to buy.</li>
+    <li>Open the game and leave online features on.</li>
+    <li>Shop → scroll to the bottom → <strong>Restore purchases</strong>.</li>
+  </ol>
+  <p>This restores your Dice Pass season(s) and moves purchased gems and items kept on our server to your current game. Transfers into one account are limited (currently up to 3 in 30 days). Content on an account that was deleted with “Delete my online data” cannot be restored, except a Dice Pass season.</p>
+
+  <p id="refunds"><strong>Refunds.</strong> Purchases are sold by Apple or Google, and only they can issue refunds:</p>
+  <ul>
+    <li>Apple: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> → choose the purchase → “Request a refund”.</li>
+    <li>Google Play: your Google Play order history → choose the order → “Request a refund”.</li>
+  </ul>
+  <p>When a purchase is refunded, we remove the paid gems it gave you (a refunded Dice Pass season is locked again). If the gems were already spent, your gem balance goes below zero and gems cannot be spent until new purchased gems cover it. Items you already opened are not taken back. See the <a href="terms.html#refunds">Terms</a>.</p>
+  <p><strong>A child made a purchase without permission?</strong> Request a refund from Apple or Google as above. To prevent it in future, turn on <em>Ask to Buy</em> / Screen Time purchase restrictions (iPhone) or purchase authentication (Google Play). The game is intended for players aged 16 and older, and players under 18 need a parent’s or guardian’s permission to make purchases.</p>
+
+  <h2 id="odds">Chest and Drop odds</h2>
+  <p>The odds for your next opening are always shown before you open: tap <strong>ODDS</strong> on the Chests screen or in the Shop. They include the chance for each rarity, the bonus items, the emotion and skin chances, and your guarantee counters (a Legendary roll within every 40 rolls; the skin chance grows with each opening without a skin, with a skin guaranteed by the 500th opening). Odds are the same for everyone, paying or not. Full rules: <a href="odds.html">odds page</a>.</p>
 
   <h2>Languages</h2>
-  <p>English, Русский, Türkçe (change it from the flag menu on the main screen).</p>
+  <p>English, Русский, Türkçe (change it from the flag button on the main screen).</p>
+
+  <h2 id="online-data">Online data, leaderboard and names</h2>
+  <p><strong>Your account is anonymous:</strong> no sign-up, no e-mail, no password.</p>
+  <p><strong>Turn online features off:</strong> Settings → “Online &amp; leaderboard”. The game then sends nothing. Purchases are not available while online features are off; items you already own stay safe on our server.</p>
+  <p id="delete"><strong>Delete your online data:</strong> Settings → “Delete my online data”. This immediately deletes your anonymous account, player ID, nickname, game records, reports, wallet and items from our server. <strong>Purchased gems and items on that account are lost and cannot be restored</strong>; a Dice Pass season can be restored to a new account with Restore purchases. If you no longer have the app, e-mail us from the address above with your <em>Player code</em> and we will delete it.</p>
+  <p id="report-name"><strong>Inappropriate name?</strong> Tap the player → “Report name”. A name reported by several players is replaced by “Player-xxxx” until we review it. Offensive names are not allowed; repeat offenders are banned. You can also hide a player for yourself, or e-mail us.</p>
+
+  <h2>Privacy and terms</h2>
+  <p>No ads and no tracking. Read the <a href="privacy.html">Privacy Policy</a> for what the online features and purchases store and how to delete it, the <a href="terms.html">Terms of Service</a> for the rules on purchases, currencies, chests and fair play, and the <a href="odds.html">odds page</a> for all chest and Drop odds.</p>
 </div>
 </body>
 </html>

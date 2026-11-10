@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dice Defense — Chest Odds</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; background: #0f1322; color: #e8e8ee; font: 16px/1.6 -apple-system, system-ui, Segoe UI, Roboto, sans-serif; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 16px 80px; }
+  h1 { font-size: 28px; margin: 0 0 6px; }
+  h2 { font-size: 19px; margin: 34px 0 8px; color: #5cc8ff; }
+  h3 { font-size: 16px; margin: 20px 0 6px; }
+  .date { color: #8a90a2; font-size: 14px; margin-bottom: 24px; }
+  a { color: #5cc8ff; }
+  .tbl { overflow-x: auto; margin: 8px 0 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 7px 6px; border-bottom: 1px solid rgba(255,255,255,.12); }
+  th { color: #b9c2d3; font-weight: 700; }
+  td.n, th.n { text-align: right; }
+  @media (max-width: 480px) { table { font-size: 13px; } th, td { padding: 6px 4px; } }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  .card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 14px 18px; margin: 14px 0; }
+  .muted { color: #8a90a2; font-size: 14px; }
+  nav { font-size: 14px; color: #8a90a2; margin-bottom: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="odds.html">Chest odds</a> · <a href="support.html">Support</a></nav>
+  <h1>Chest &amp; Drop Odds — Dice Defense</h1>
+  <div class="date">Effective date: 10 November 2026 · Last updated: 10 November 2026</div>
+
+  <div class="card">
+    <ul>
+      <li>Every <strong>Drop</strong> and <strong>chest</strong> gives random items. This page lists all the odds and rules. The game shows the same odds, calculated for your collection and counters, <strong>before you open</strong>: tap <strong>ODDS</strong> (or <strong>%</strong>) on the Chests screen or in the Shop.</li>
+      <li><strong>Same odds for everyone.</strong> Paying never changes any odds, limits or counters.</li>
+      <li><strong>Drops</strong> are earned by playing and are never sold for money. A <strong>Gold Chest</strong> is opened with gold; gold can also be obtained with purchased gems, so a Gold Chest counts as a <strong>paid random item</strong>.</li>
+      <li>Results have no cash value and cannot be traded or sold. We do not award prizes for collecting a complete set of items from chests.</li>
+      <li>Percentages are exact values used by the game. Small values are shown with up to three decimal places and are never rounded to 0%.</li>
+    </ul>
+  </div>
+
+  <h2 id="kinds">1. What each Drop and chest contains</h2>
+  <p>Every opening has a fixed part (the number of die rolls, fixed dust and Spark) and random parts (each die roll, the bonus item, and the extra emotion and skin chances).</p>
+  <div class="tbl"><table>
+    <tr><th>Type</th><th>How you get it</th><th class="n">Die rolls</th><th>Guaranteed extra roll</th><th class="n">Bonus items</th><th class="n">Fixed dust + Spark</th></tr>
+    <tr><td>Bronze Drop</td><td>Daily win slots, Campaign stars, starting Drops, end of season</td><td class="n">1</td><td>—</td><td class="n">1 × Drop table</td><td class="n">3 + 3</td></tr>
+    <tr><td>Silver Drop</td><td>Daily win slots</td><td class="n">2</td><td>—</td><td class="n">1 × Drop table</td><td class="n">6 + 6</td></tr>
+    <tr><td>Amber Drop</td><td>Daily win slots, Dice Pass free track (tiers 3 and 13), 7th play day</td><td class="n">3</td><td>—</td><td class="n">1 × Gold table</td><td class="n">12 + 12</td></tr>
+    <tr><td>Ruby Drop</td><td>Daily win slots, Dice Pass free track (tier 25), 14th play day</td><td class="n">4</td><td>+1 Epic roll</td><td class="n">2 × Gold table</td><td class="n">25 + 25</td></tr>
+    <tr><td>Diamond Drop</td><td>Daily win slots, Dice Pass free track (tier 38), play days 25, 75, 125, … (every 25th day that is not a multiple of 50)</td><td class="n">5</td><td>+1 Legendary roll</td><td class="n">2 × Gold table</td><td class="n">50 + 50</td></tr>
+    <tr><td>Gold Chest</td><td>Shop, with gold: 1,000 · 1,000 · 3,000 · 3,000 gold for the 1st–4th chest of the day (max 4 per day); Dice Pass free track (tier 40)</td><td class="n">2</td><td>—</td><td class="n">1 × Gold table</td><td class="n">—</td></tr>
+    <tr><td>Big Chest</td><td>Every 50th play day (not sold)</td><td class="n">6</td><td>—</td><td class="n">2 × Gold table</td><td class="n">—</td></tr>
+  </table></div>
+  <p class="muted">A “play day” is a calendar day on which you finished at least one game. The count never resets. Every 100th play day also gives a <strong>skin of your choice</strong> (no random element) together with a Big Chest.</p>
+
+  <!-- M4t daily win Drops: verified against src/drops.ts on 2026-11-09; re-verify against the final released code before publishing. -->
+  <h2 id="daily">2. Daily win Drops — which tier you get</h2>
+  <p>Each day you have <strong>5 win slots</strong>. Each “win” fills one slot and gives one Drop. A win is: winning a Campaign level; reaching wave 8 in Arcade; or winning a Ranked match (a Ranked loss that reaches wave 8 also counts). Slots reset at local midnight; Drops you already received never expire.</p>
+  <p>The Drop’s tier is decided <strong>when the Drop is given</strong> and stored. The opening animation only reveals it — tapping does not change the result.</p>
+  <div class="tbl"><table>
+    <tr><th>Tier</th><th class="n">1st slot of the day</th><th class="n">Slots 2–5</th></tr>
+    <tr><td>Bronze</td><td class="n">0%</td><td class="n">50%</td></tr>
+    <tr><td>Silver</td><td class="n">78%</td><td class="n">28%</td></tr>
+    <tr><td>Amber</td><td class="n">15%</td><td class="n">15%</td></tr>
+    <tr><td>Ruby</td><td class="n">5%</td><td class="n">5%</td></tr>
+    <tr><td>Diamond</td><td class="n">2%</td><td class="n">2%</td></tr>
+  </table></div>
+  <p class="muted">The first slot of each day is always Silver or better. Drops from Campaign stars, the Dice Pass and play-day milestones have the fixed tier shown in section 1 (no random tier).</p>
+
+  <h2 id="dice">3. Die rolls</h2>
+  <h3>3.1 Rarity of each roll</h3>
+  <div class="tbl"><table>
+    <tr><th>Rarity</th><th class="n">Chance per roll</th></tr>
+    <tr><td>Common</td><td class="n">55%</td></tr>
+    <tr><td>Rare</td><td class="n">32%</td></tr>
+    <tr><td>Epic</td><td class="n">11%</td></tr>
+    <tr><td>Legendary</td><td class="n">2%</td></tr>
+  </table></div>
+  <ul>
+    <li><strong>Legendary guarantee:</strong> a Legendary roll is guaranteed within every <strong>40</strong> die rolls without one. The counter counts die rolls (not chests), is shared by all Drops and chests, and resets when you get a Legendary roll. The game shows how many rolls are left.</li>
+    <li>The guaranteed Epic roll (Ruby Drop) and Legendary roll (Diamond Drop) are extra rolls of that rarity. A guaranteed Legendary roll also resets the Legendary counter.</li>
+  </ul>
+  <h3>3.2 Which die you get</h3>
+  <ul>
+    <li>After the rarity is decided: if you do not own any die of that rarity yet, the roll goes <strong>100%</strong> to your chosen <strong>Next die</strong> of that rarity (you choose it in the Collection; if you have not chosen, the first locked die of that rarity is used).</li>
+    <li>Otherwise, <strong>20%</strong> of the roll goes to your Next die and <strong>80%</strong> to one of the dice of that rarity you already own (all equally likely; within one opening the game avoids repeating the same die where possible).</li>
+    <li>If every die of that rarity is already unlocked, the roll is always one of your own dice.</li>
+    <li>Dice that return in a later season are not in any Drop or chest until their season starts (shown in the Collection).</li>
+  </ul>
+  <h3>3.3 What a roll gives</h3>
+  <div class="tbl"><table>
+    <tr><th>Rarity</th><th class="n">Shards for a locked die</th><th class="n">Shards to unlock</th><th class="n">Duplicate of an owned die</th></tr>
+    <tr><td>Common</td><td class="n">10</td><td class="n">100</td><td class="n">5 Spark (10 gold if the die is at Power 10)</td></tr>
+    <tr><td>Rare</td><td class="n">5</td><td class="n">300</td><td class="n">10 Spark (20 gold)</td></tr>
+    <tr><td>Epic</td><td class="n">3</td><td class="n">150</td><td class="n">20 Spark (40 gold)</td></tr>
+    <tr><td>Legendary</td><td class="n">2</td><td class="n">50</td><td class="n">40 Spark (80 gold)</td></tr>
+  </table></div>
+
+  <h2 id="bonus">4. Bonus item tables</h2>
+  <p>Each bonus item is drawn from one of two tables. Percentages are the chance of each exact result for one bonus item.</p>
+  <div class="tbl"><table>
+    <tr><th>Result</th><th class="n">Drop table</th><th>Result</th><th class="n">Gold table</th></tr>
+    <tr><td><strong>Gold — total</strong></td><td class="n"><strong>57%</strong></td><td><strong>Gold — total</strong></td><td class="n"><strong>55%</strong></td></tr>
+    <tr><td>10 gold</td><td class="n">34.2%</td><td>50 gold</td><td class="n">33%</td></tr>
+    <tr><td>25 gold</td><td class="n">17.1%</td><td>150 gold</td><td class="n">16.5%</td></tr>
+    <tr><td>100 gold</td><td class="n">5.7%</td><td>500 gold</td><td class="n">5.5%</td></tr>
+    <tr><td><strong>Spark — total</strong></td><td class="n"><strong>15%</strong></td><td><strong>Spark — total</strong></td><td class="n"><strong>15%</strong></td></tr>
+    <tr><td>5 Spark</td><td class="n">9%</td><td>10 Spark</td><td class="n">9%</td></tr>
+    <tr><td>10 Spark</td><td class="n">4.5%</td><td>20 Spark</td><td class="n">4.5%</td></tr>
+    <tr><td>20 Spark</td><td class="n">1.5%</td><td>50 Spark</td><td class="n">1.5%</td></tr>
+    <tr><td><strong>Dust</strong>: 10 dust</td><td class="n"><strong>20%</strong></td><td><strong>Dust</strong>: 25 dust</td><td class="n"><strong>20%</strong></td></tr>
+    <tr><td><strong>Pass XP ticket — total</strong></td><td class="n"><strong>8%</strong></td><td><strong>Pass XP ticket — total</strong></td><td class="n"><strong>10%</strong></td></tr>
+    <tr><td>50 XP</td><td class="n">4%</td><td>100 XP</td><td class="n">3.5%</td></tr>
+    <tr><td>100 XP</td><td class="n">2.4%</td><td>250 XP</td><td class="n">3.5%</td></tr>
+    <tr><td>250 XP</td><td class="n">1.04%</td><td>500 XP</td><td class="n">2%</td></tr>
+    <tr><td>500 XP</td><td class="n">0.4%</td><td>1,000 XP</td><td class="n">0.8%</td></tr>
+    <tr><td>1,000 XP</td><td class="n">0.12%</td><td>3,000 XP</td><td class="n">0.2%</td></tr>
+    <tr><td>3,000 XP</td><td class="n">0.04%</td><td></td><td></td></tr>
+  </table></div>
+  <p class="muted">Pass XP tickets add XP to the Dice Pass at once (no bonuses), up to 3,000 ticket XP per day. XP above that daily limit, or after tier 40, is converted to gold (2 XP = 1 gold).</p>
+
+  <h2 id="emotions">5. Emotion chance (extra, on top)</h2>
+  <div class="tbl"><table>
+    <tr><th>Type</th><th class="n">Emotion chance per opening</th><th class="n">First 5 openings (doubled)</th></tr>
+    <tr><td>Bronze Drop</td><td class="n">1.5%</td><td class="n">3%</td></tr>
+    <tr><td>Silver Drop</td><td class="n">2.5%</td><td class="n">5%</td></tr>
+    <tr><td>Amber Drop</td><td class="n">4%</td><td class="n">8%</td></tr>
+    <tr><td>Ruby Drop</td><td class="n">10%</td><td class="n">20%</td></tr>
+    <tr><td>Diamond Drop</td><td class="n">20%</td><td class="n">40%</td></tr>
+    <tr><td>Gold Chest</td><td class="n">5%</td><td class="n">10%</td></tr>
+    <tr><td>Big Chest</td><td class="n">5%</td><td class="n">— (not doubled)</td></tr>
+  </table></div>
+  <ul>
+    <li><strong>New players:</strong> for your first 5 Drops or Gold Chests, the emotion chance is doubled; if none of the first 4 gave an emotion, the 5th one gives one for sure. Die odds are not changed.</li>
+    <li><strong>Which emotion:</strong> Common 75% · Rare 25%, then equally among the emotions of that rarity that you do not own yet, for dice you own. If none of that rarity is left, you get one of the other rarity.</li>
+    <li>If you already own every emotion that chests can give, you get 100 gold instead.</li>
+  </ul>
+
+  <h2 id="skins">6. Skin chance (extra, on top) and skin guarantee</h2>
+  <p>The skin chance grows with every opening that gives no skin: <strong>chance = starting chance + increase × (openings without a skin)</strong>, up to the maximum.</p>
+  <div class="tbl"><table>
+    <tr><th>Type</th><th class="n">Starting chance</th><th class="n">Increase per opening without a skin</th><th class="n">Maximum</th></tr>
+    <tr><td>Bronze Drop</td><td class="n">0.05%</td><td class="n">+0.001%</td><td class="n">0.55%</td></tr>
+    <tr><td>Silver Drop</td><td class="n">0.1%</td><td class="n">+0.002%</td><td class="n">1.1%</td></tr>
+    <tr><td>Amber Drop</td><td class="n">0.5%</td><td class="n">+0.004%</td><td class="n">2.5%</td></tr>
+    <tr><td>Ruby Drop</td><td class="n">1%</td><td class="n">+0.005%</td><td class="n">4%</td></tr>
+    <tr><td>Diamond Drop</td><td class="n">3%</td><td class="n">+0.01%</td><td class="n">10%</td></tr>
+    <tr><td>Gold Chest and Big Chest</td><td class="n">0.5%</td><td class="n">+0.004%</td><td class="n">2.5%</td></tr>
+  </table></div>
+  <ul>
+    <li><strong>Guarantee:</strong> if 499 openings in a row gave no skin, the <strong>500th opening gives a skin</strong> (100%).</li>
+    <li>The “openings without a skin” counter is <strong>shared</strong> by all Drops and chests and <strong>resets to 0</strong> when you get a skin. The game shows your current counter and your current chance.</li>
+    <li><strong>Which skin:</strong> only skins for dice you own and do not have yet (no duplicates). Skin rarity: Standard 45% · Rare 35% · Epic 15% · Legendary 5%, counted only among the rarities you can still get (the others are shared out proportionally); then equally within that rarity.</li>
+    <li>Signature skins are never in Drops or chests. <strong>Season skins</strong> (skins of a season’s featured die) are available in the Dice Pass during that season and the next one; later they may also appear in the Shop and in Drops and chests.</li>
+    <li>If there are no skins left for you to get, there is no skin roll and the counter waits.</li>
+  </ul>
+
+  <h2 id="changes">7. Changes to these odds</h2>
+  <p>We will announce any change to the odds or rules on this page at least <strong>7 days</strong> before it takes effect, in the game and here. Your counters (Legendary and skin) are kept when odds change. Per-item odds also change automatically when you unlock dice, emotions or skins, or when dice return in a new season; the in-game ODDS screen always shows your current values.</p>
+
+  <p class="muted">Questions: <a href="mailto:cs.araz.gasimov@gmail.com">cs.araz.gasimov@gmail.com</a> · <a href="terms.html#chests">Terms, section 8</a> · <a href="support.html">Support</a></p>
+</div>
+</body>
+</html>
